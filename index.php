@@ -94,7 +94,12 @@ foreach($faq as $question) {
         <main>
             <div class="wrapper">
                 <?php foreach ($faq as $question):?>
-                <h2><?php echo $question['domanda'];?></h2>
+                    <h2><?php echo $question['domanda'];?></h2>
+                    <?php foreach ($question['risposta'] as $answer):?>
+                        <h3><?php echo $answer['sottotitolo'];?></h3>
+                        <p><?php echo $answer['corpo'];?></p>
+
+                    <?php endforeach;?>
                 <?php endforeach;?>
             </div>
 
