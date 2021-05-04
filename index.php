@@ -70,4 +70,39 @@ $faq = [
 
 var_dump($faq);
 
+foreach($faq as $question) {
+    echo "{$question['domanda']}\n";
+
+    foreach($question['risposta'] as $answer) {
+        echo "ciao";
+    };
+}
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>php-google-faq</title>
+    </head>
+    <body>
+        <header>
+            <h1>Google privacy e termini</h1>
+        </header>
+        <main>
+            <div class="wrapper">
+                <?php foreach ($faq as $question):?>
+                <h2><?php echo $question['domanda'];?></h2>
+                <?php endforeach;?>
+            </div>
+
+
+        </main>
+        <footer>
+
+        </footer>
+ 
+    </body>
+</html>
