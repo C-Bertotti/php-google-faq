@@ -67,17 +67,6 @@ $faq = [
         ]
     ],
 ];
-
-var_dump($faq);
-
-foreach($faq as $question) {
-    echo "{$question['domanda']}\n";
-
-    foreach($question['risposta'] as $answer) {
-        echo "ciao";
-    };
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -86,19 +75,29 @@ foreach($faq as $question) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>php-google-faq</title>
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+        <!-- style  -->
+        <link rel="stylesheet" href="dist/app.css">
+        <!-- / style  -->
     </head>
     <body>
         <header>
-            <h1>Google privacy e termini</h1>
+            <div class="wrapper">
+                <h1>Google privacy e termini</h1>
+            </div>
         </header>
         <main>
             <div class="wrapper">
                 <?php foreach ($faq as $question):?>
                     <h2><?php echo $question['domanda'];?></h2>
                     <?php foreach ($question['risposta'] as $answer):?>
-                        <h3><?php echo $answer['sottotitolo'];?></h3>
+                        <?php if($answer['sottotitolo'] !== " "): ?>
+                            <h3><?php echo $answer['sottotitolo'];?></h3>
+                        <?php endif; ?>
                         <p><?php echo $answer['corpo'];?></p>
-
                     <?php endforeach;?>
                 <?php endforeach;?>
             </div>

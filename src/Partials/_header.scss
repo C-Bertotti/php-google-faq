@@ -1,0 +1,14 @@
+header {
+    border-bottom: 1px solid  $primaryColor;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    height: 60px;
+    line-height: 60px;
+
+    .wrapper {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

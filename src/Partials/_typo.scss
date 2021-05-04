@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: $primaryColor;
+    font-size: $headingM;
+    font-weight: $fontReg;
+}
+
+h2, h3 {
+    color: $headingColor;
+}
+
+h2 {
+    
+    font-size: $headingL;
+    margin: 80px 0 30px;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: $headingS;
+    margin: 50px 0 20px;
+    line-height: 1.5;
+    font-weight: $fontBold;
+
+}
+
+p {
+    font-size: $pS;
+    font-weight: $fontLight;
+}
